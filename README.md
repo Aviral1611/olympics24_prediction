@@ -19,5 +19,4 @@ This project uses historical data from the 2021 Tokyo Olympics to predict the me
 - Flask
 - Pandas
 - HTML/CSS
-- Vercel (for deployment)
 
