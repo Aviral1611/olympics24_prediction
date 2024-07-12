@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>2024 Olympics Predictions</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Top 10 Predicted Countries for 2024 Paris Olympics</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Country</th>
+                    <th>Expected Medals</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for index, row in winners.iterrows() %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ row['Team/NOC'] }}</td>
+                    <td>{{ row['Expected Total Medals 2024'] | round(2) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
